@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>triple jackpot</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+    var pts=0;
+    function myfun() {
+    myVar = setInterval(notes, 100);
+   }
+   function stop() {
+    clearInterval(myVar);
+    var pf = document.getElementById("a");
+    var qf = document.getElementById("b");
+    var rf = document.getElementById("c");
+    if(pf==qf&&qf==rf)
+{
+  alert("hola!!!");
+  pts++;
+  document.getElementById("points").innerHTML="your score in this game is " + pts +" points";
+}
+else
+{
+  var cfn=confirm("lets try it again");
+  if(cfn==true)
+  {
+    myfun();
+  }
+  document.getElementById("points").innerHTML="your score in this game is " + pts +" points";
+}
+}
+function notes(){
+  var p = getRandomInt(0,10);
+  var q = getRandomInt(0,10);
+  var r = getRandomInt(0,10);
+        switch(p){
+            case 0:
+            document.getElementById("a").innerHTML= '<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbdQWAa2WIWVXu0QRpdRh8j81udtJFdPKS9b6sWU3oVTd0D_-9" width=75px height=75px/>';
+            break;
+            case 1:
+            document.getElementById("a").innerHTML= '<img src="https://qph.ec.quoracdn.net/main-qimg-f0d732a5ae277ec1aebf854aaf18f52a-c" width=75px height=75px/>';
+            break;
+            case 2:
+            document.getElementById("a").innerHTML= '<img src="http://images2.fanpop.com/images/photos/7200000/Mangekyou-Sharingan-Kakashi-kekkei-genkai-7297790-300-300.jpg" width=75px height=75px/>';
+            break;
+            case 3:
+            document.getElementById("a").innerHTML= '<img src="http://www.cuded.com/wp-content/uploads/2012/10/mangekyou_sharingan_madara_ii_by_fortyseven47600_600.jpg" width=75px height=75px/>';
+            break;
+            case 4:
+            document.getElementById("a").innerHTML= '<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTU2CXTOW7HQOW5mQd8XtFa-3meo_h1NedoZ4T-xxcGX13RCpglwQ" width=75px height=75px/>';
+            break;
+            case 5:
+            document.getElementById("a").innerHTML= '<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQp60cX_dkzAOAbogMhkKmIwn7QPrJHND2rAI1ky7zpylBN94f0A" width=75px height=75px/>';
+            break;
+            case 6:
+            document.getElementById("a").innerHTML= '<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxKUk2VYnuqI9YS4XJgkvTbYFw5HVYBy1KUnB2QbhTkrvfecqMiw" width=75px height=75px/>';
+            break;
+            case 7:
+            document.getElementById("a").innerHTML= '<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcQyIAtiLMmRPF2OmiB58sQzyaH59oY6HB942g5FlB_yYk6_9gmQ" width=75px height=75px/>';
+            break;
+            case 8:
+            document.getElementById("a").innerHTML= '<img src="http://orig11.deviantart.net/674e/f/2014/144/3/1/12_baru_uchiha_mangekyou_sharingan_by_fire1995-d7jl7nx.png" width=75px height=75px/>';
+            break;
+            case 9:
+            document.getElementById("a").innerHTML= '<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnLth-sNnTMjFOkBVOI4Zqvo8ua36VRqvewQUEtUb19H1wbIFR" width=75px height=75px/>';
+            break;
+        }
+        switch(q){
+            case 0:
+            document.getElementById("b").innerHTML= '<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbdQWAa2WIWVXu0QRpdRh8j81udtJFdPKS9b6sWU3oVTd0D_-9" width=75px height=75px/>';
+            break;
+            case 1:
+            document.getElementById("b").innerHTML= '<img src="https://qph.ec.quoracdn.net/main-qimg-f0d732a5ae277ec1aebf854aaf18f52a-c" width=75px height=75px/>';
+            break;
+            case 2:
+            document.getElementById("b").innerHTML= '<img src="http://images2.fanpop.com/images/photos/7200000/Mangekyou-Sharingan-Kakashi-kekkei-genkai-7297790-300-300.jpg" width=75px height=75px/>';
+            break;
+            case 3:
+            document.getElementById("b").innerHTML= '<img src="http://www.cuded.com/wp-content/uploads/2012/10/mangekyou_sharingan_madara_ii_by_fortyseven47600_600.jpg" width=75px height=75px/>';
+            break;
+            case 4:
+            document.getElementById("b").innerHTML= '<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTU2CXTOW7HQOW5mQd8XtFa-3meo_h1NedoZ4T-xxcGX13RCpglwQ" width=75px height=75px/>';
+            break;
+            case 5:
+            document.getElementById("b").innerHTML= '<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQp60cX_dkzAOAbogMhkKmIwn7QPrJHND2rAI1ky7zpylBN94f0A" width=75px height=75px/>';
+            break;
+            case 6:
+            document.getElementById("b").innerHTML= '<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxKUk2VYnuqI9YS4XJgkvTbYFw5HVYBy1KUnB2QbhTkrvfecqMiw" width=75px height=75px/>';
+            break;
+            case 7:
+            document.getElementById("b").innerHTML= '<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcQyIAtiLMmRPF2OmiB58sQzyaH59oY6HB942g5FlB_yYk6_9gmQ" width=75px height=75px/>';
+            break;
+            case 8:
+            document.getElementById("b").innerHTML= '<img src="http://orig11.deviantart.net/674e/f/2014/144/3/1/12_baru_uchiha_mangekyou_sharingan_by_fire1995-d7jl7nx.png" width=75px height=75px/>';
+            break;
+            case 9:
+            document.getElementById("b").innerHTML= '<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnLth-sNnTMjFOkBVOI4Zqvo8ua36VRqvewQUEtUb19H1wbIFR" width=75px height=75px/>';
+            break;
+        }
+        switch(r){
+            case 0:
+            document.getElementById("c").innerHTML= '<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbdQWAa2WIWVXu0QRpdRh8j81udtJFdPKS9b6sWU3oVTd0D_-9" width=75px height=75px/>';
+            break;
+            case 1:
+            document.getElementById("c").innerHTML= '<img src="https://qph.ec.quoracdn.net/main-qimg-f0d732a5ae277ec1aebf854aaf18f52a-c" width=75px height=75px/>';
+            break;
+            case 2:
+            document.getElementById("c").innerHTML= '<img src="http://images2.fanpop.com/images/photos/7200000/Mangekyou-Sharingan-Kakashi-kekkei-genkai-7297790-300-300.jpg" width=75px height=75px/>';
+            break;
+            case 3:
+            document.getElementById("c").innerHTML= '<img src="http://www.cuded.com/wp-content/uploads/2012/10/mangekyou_sharingan_madara_ii_by_fortyseven47600_600.jpg" width=75px height=75px/>';
+            break;
+            case 4:
+            document.getElementById("c").innerHTML= '<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTU2CXTOW7HQOW5mQd8XtFa-3meo_h1NedoZ4T-xxcGX13RCpglwQ" width=75px height=75px/>';
+            break;
+            case 5:
+            document.getElementById("c").innerHTML= '<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQp60cX_dkzAOAbogMhkKmIwn7QPrJHND2rAI1ky7zpylBN94f0A" width=75px height=75px/>';
+            break;
+            case 6:
+            document.getElementById("c").innerHTML= '<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxKUk2VYnuqI9YS4XJgkvTbYFw5HVYBy1KUnB2QbhTkrvfecqMiw" width=75px height=75px/>';
+            break;
+            case 7:
+            document.getElementById("c").innerHTML= '<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcQyIAtiLMmRPF2OmiB58sQzyaH59oY6HB942g5FlB_yYk6_9gmQ" width=75px height=75px/>';
+            break;
+            case 8:
+            document.getElementById("c").innerHTML= '<img src="http://orig11.deviantart.net/674e/f/2014/144/3/1/12_baru_uchiha_mangekyou_sharingan_by_fire1995-d7jl7nx.png" width=75px height=75px/>';
+            break;
+            case 9:
+            document.getElementById("c").innerHTML= '<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnLth-sNnTMjFOkBVOI4Zqvo8ua36VRqvewQUEtUb19H1wbIFR" width=75px height=75px/>';
+            break;
+        }
+   function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+   
+}
+    </script>
+    <style type="text/css">
+      table, th, td {
+   border: 1px solid black;
+   font-size: 25px;
+   align-self: center;
+   color: green;
+ }
+      th, td {
+    padding: 30px;
+    text-align: center;
+    font-size: 40px;
+}
+button {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+    margin-left: 380px;
+    cursor:cross-over;
+}
+#points{
+  font-size: 40px;
+  color: red;
+  font-family: Georgia, serif;
+  font-style: italic;
+  text-align: center;
+}
+#jackpot{
+  font-size: 60px;
+  font-family: Andale Mono, monospace;
+  text-align :center;
+  font-variant: small-caps;background-color:blue; 
+  padding:50px;
+  color:red;
+}
+    </style>
+    </head>
+    <body  >
+    <div id="jackpot">Cherry Jackpot Game</div>
+        <table style="width:50%" align="center">
+        <tr>
+    <th style="color:green">A</th>
+    <th style="color:green">B</th> 
+    <th style="color:green">C</th>
+  </tr>
+  <tr>
+    <th id="a"> </th>
+    <th id="b"> </th> 
+    <th id="c"> </th>
+  </tr>
+  </table>
+        <p id="div"></p>
+        <button id="new" onclick="myfun()" align="center">spin </button>
+        <button id="stop" onclick="stop()" align="center">stop </button>
+        <p id="points"></p>
+
+    </body>
+</html>
