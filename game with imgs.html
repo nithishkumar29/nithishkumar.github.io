@@ -5,15 +5,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script>
     var pts=0;
+    var p,q,r;
     function myfun() {
     myVar = setInterval(notes, 100);
    }
    function stop() {
     clearInterval(myVar);
-    var pf = document.getElementById("a");
-    var qf = document.getElementById("b");
-    var rf = document.getElementById("c");
-    if(pf==qf&&qf==rf)
+    if(p==q&&q==r)
 {
   alert("hola!!!");
   pts++;
