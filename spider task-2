@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<body  id="nhu">
+<button id="start" onclick="start()">start</button>
+<button id="stop" onclick="stop()">clear</button>
+<canvas id="myCanvas" width=1000" height="600"style="border:1px solid #d3d3d3;">Your browser does not support the canvas element.
+</canvas>
+<div id="score">ur points are <span id="points">0</span></div>
+<script>
+var canvas = document.getElementById("myCanvas");
+ctx=canvas.getContext("2d");
+var p=0,q=0,r=0,s=0,x=200;
+var gunY=canvas.height/2;
+var bulletX=850,bulletY=315;
+var point=0;
+var i=bulletX+1;
+   	var j=bulletY+1;
+   	var a=310+s;
+   	var b=290+s;
+   	var c=340+r;
+   	var d=260+r;
+   	var f=360+q;
+   	var g=240+q;
+document.body.onkeyup = function(e){
+    if(e.keyCode == 40){
+        //your code
+        gunY+=10;
+        bulletY+=10;
+    }
+    else if(e.keyCode == 38){
+    	gunY-=10;
+    	bulletY-=10;
+    }
+    else if(e.keyCode == 37){
+    	//left arrow
+    	bulletX-=10;
+    }
+    else if(e.keyCode == 39){
+    	bulletX+=10;
+    }
+    else if(e.keyCode == 32){
+    	point+=target();
+    	document.getElementById("points").innerHTML=point;
+    }
+}
+function start(){
+		function draw(){
+
+		ctx1();
+		ctx2();
+		ctx3();
+		ctx4();
+		drawGun();
+		drawHandle();
+		drawBullets();
+		
+		}
+setInterval(draw,700);
+}
+
+
+function target(){
+   	
+   	if(((i>=840)&&(i<=860))&&((j<=a)&&(j>=b))){
+   		return 10;
+   	}
+   	else if((((i>=810)&&(i<840))||((i>860)&&(i<=890)))&&(((j>=d)&&(j<b))||((j>a)&&(j<=c)))){
+   		return 5;
+   	}
+   	else if((((i>=790)&&(i<810))||((i>890)&&(i<=910)))&&(((j>=g)&&(j<d))||((j>c)&&(j<=f)))){
+   		return 3;
+   	}
+   	else{
+   		return 0;
+   	}
+}
+
+function drawBullets(){
+	crossFire=canvas.getContext("2d");
+	crossFire.beginPath();
+	crossFire.fillStyle="black";
+	crossFire.arc(bulletX,bulletY,2,0,2*Math.PI);
+	crossFire.fill();
+	crossFire.closePath();
+}
+
+function drawGun(){
+	ctxGun1=canvas.getContext("2d");
+	ctxGun1.beginPath();
+	ctxGun1.rect(100,gunY,100,30);
+	ctxGun1.fillStyle = "#0095DD";
+    ctxGun1.fill();
+    ctxGun1.closePath();
+}
+
+function drawHandle(){
+
+	ctxHandle = canvas.getContext("2d");
+	ctxHandle.beginPath();
+	ctxHandle.rect(100,gunY+30,30,50);
+	ctxHandle.fillStyle = "red";
+    ctxHandle.fill();
+    ctxHandle.closePath();
+
+}
+
+
+function ctx1(){
+	var ctx1 = canvas.getContext("2d");
+	ctx1.beginPath();
+	ctx1.strokeStyle="red";
+	ctx1.clearRect(0, 0, canvas.width, canvas.height);
+	if(p+380<=680){
+	ctx1.arc(850,300+p,80,0,2*Math.PI);
+	ctx1.stroke();
+	p=p+20; 
+	}
+	else if(p>300){
+	p=-300;
+	}
+}
+function ctx2(){
+	var ctx2 = canvas.getContext("2d");
+	ctx2.beginPath();
+	ctx2.strokeStyle="blue";
+	if(q+380<=680){
+	ctx2.arc(850,300+q,60,0,2*Math.PI);
+	ctx2.stroke();
+	q=q+20;
+	}
+	else if(q>300){
+	q=-300;
+	}
+}
+function ctx3(){
+	var ctx3 = canvas.getContext("2d");
+	ctx3.beginPath();
+	ctx3.strokeStyle="green";
+	if(r+380<=680){
+	ctx3.arc(850,300+r,40,0,2*Math.PI);
+	ctx3.stroke();
+	r=r+20;
+	}
+	else if(r>300){
+	r=-300;
+	}
+}
+function ctx4(){
+	var ctx4 = canvas.getContext("2d");
+	ctx4.beginPath();
+	ctx4.strokeStyle="black";
+	if(s+380<=680){
+	ctx4.arc(850,300+s,10,0,2*Math.PI);
+	ctx4.stroke();
+	s=s+20;
+	}
+	else if(s>300){
+	s=-300;
+	}
+}
+
+</script> 
+<style type="text/css">
+	canvas{
+		background-image: url("https://previews.123rf.com/images/nomadsoul1/nomadsoul11403/nomadsoul1140300411/26792792-Shooting-range-target-isolated-on-white-background-Stock-Photo.jpg");
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+	
+	button{
+		float: right;
+		padding-left: 20px;
+	}
+	#score{
+		float: right;
+		font-size: 30px;
+	}
+</style>
+
+</body>
+</html>
